@@ -1,3 +1,5 @@
+" change leader key form \ to ,
+let mapleader = ","
 syntax enable " enable syntax processing
 " tabstop - number of visual spaces per TAB
 " softtabstop - number of spaces in tab when editing
@@ -88,15 +90,10 @@ let g:ycm_extra_conf_vim_data = [
   \  'g:ycm_python_sys_path'
   \]
 let g:ycm_global_ycm_extra_conf = '~/.vim/global_extra_conf.py'
-"python with virtualenv support
-"py3 << EOF
-"import os
-"import sys
-"if 'VIRTUAL_ENV' in os.environ:
-"  project_base_dir = os.environ['VIRTUAL_ENV']
-"  activate_this = os.path.join(project_base_dir, 'bin/activate_this.py')
-"  exec(open(activate_this).read(), dict(__file__=activate_this))
-"EOF
+" YCM Symbol search key map
+nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
+nmap <leader>yfd <Plug>(YCMFindSymbolInDocument)
+nnoremap <leader>jd :YcmCompleter GoTo<CR>
 
 call plug#begin()
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
