@@ -94,6 +94,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vim/global_extra_conf.py'
 nmap <leader>yfw <Plug>(YCMFindSymbolInWorkspace)
 nmap <leader>yfd <Plug>(YCMFindSymbolInDocument)
 nnoremap <leader>jd :YcmCompleter GoTo<CR>
+nnoremap <leader>gd :YcmCompleter GetDoc<CR>
 
 call plug#begin()
 " Shorthand notation; fetches https://github.com/junegunn/vim-easy-align
@@ -103,6 +104,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'tmhedberg/SimpylFold'
 Plug 'vim-scripts/indentpython.vim'
 Plug 'ycm-core/YouCompleteMe'
+Plug 'Yggdroot/indentLine'
 Plug 'vim-syntastic/syntastic'
 Plug 'jnurmine/Zenburn'
 Plug 'altercation/vim-colors-solarized'
@@ -114,4 +116,4 @@ Plug 'kien/ctrlp.vim'
 Plug 'bitc/vim-bad-whitespace'
 Plug 'tpope/vim-fugitive'
 Plug 'vim-airline/vim-airline'
-call plug#end()
+all plug#end()
